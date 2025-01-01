@@ -1,0 +1,98 @@
+1.Django using venv virtual environment:
+
+mkdir django4      
+cd django4
+python -m venv myvenv 
+.\myvenv\Scripts\activate
+pip install django   
+django-admin startproject iqbs .
+python manage.py runserver
+
+
+
+if i close terminal then when i need to it again then,
+
+cd django4  (Django 4 is name of directory)
+.\myvenv\Scripts\activate
+python manage.py runserver   (again run)
+
+reference :https://www.youtube.com/watch?v=EjIoERmeVE8
+
+
+ #create a folder at D drive
+Microsoft Windows [Version 10.0.22631.3880]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Md Razaul Karim>d:
+
+D:\>mkdir project
+
+D:\>cd project
+
+D:\project>python -m venv env
+
+D:\project>
+
+      
+
+Run in vs code a django project:
+ **dir
+**drag activate inside terminal
+**pip install django
+**django-admin startproject project name
+**cd project name
+**python manage.py runserver
+ **python manage.py startapp appname,
+** in setting. py file ,line 43 , type" type app name then ,'"
+
+**inside url. py type it "from django.contrib import admin
+from django.urls import path,include
+
+urlpatterns = [
+    
+    path('',include('ai.urls')),
+]
+"
+**inside app in urls.py type"from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('',views.course)
+]
+"
+**inside app in view.py type"from django.shortcuts import render
+
+# Create your views here.
+def course(request):
+    return render(request,'course.html')"
+**if old project how to add env and run the project again ???
+.\env\Scripts\activate
+
+
+**create tamplate folder
+ **in setting. py file ,line 17 , type" TEMPLATES_DIR=BASE_DIR/'templates'"
+inside tamplate create html file
+**create another static folder inside project:  
+** inside settion .py at line 18 type "STATIC_DIR= BASE_DIR/'static'"
+  line 122,123 type'STATIC_URL = 'static/'
+STATICFILES_DIRS=[STATIC_DIR,]"
+
+**inside static create  a css folder
+** inside css folder create style.css file
+** load statis 2nd line of html file type
+** connect html and css file
+** inside tampalte folder create a floder and named common_code
+**write this code in terminal  to change python to sql "python manage.py makemigrations"
+** for unapplied  migration "python manage.py migrate"
+
+3. PIPENV shell
+mkdir django6
+cd django6
+python -m pipenv shell OR pipenv shell
+pip install django
+
+django-admin
+django-admin startproject blog_project .
+python manage.py runserver
+ 
+python manage.py startapp blog
